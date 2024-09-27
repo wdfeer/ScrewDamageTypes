@@ -1,13 +1,11 @@
 # This file will automatically update with entries for new content after a build and reload.
 
 Items: {
-	CycleDamageTypes: {
-		DisplayName: "Cycle Damage Types"
+	CyclingEmblem: {
+		DisplayName: "Cycling Emblem"
 		Tooltip:
 			'''
-			Template of an item
-			Replacing this tooltip is duty 
-			It's snowing on Mt.Fuji
+			Cycles damage type globally on every hit 
 			'''
 	}
 }
