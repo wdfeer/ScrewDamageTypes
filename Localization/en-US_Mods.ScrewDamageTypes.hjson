@@ -2,10 +2,7 @@
 
 Items: {
 	CyclingEmblem: {
-		DisplayName: "Cycling Emblem"
-		Tooltip:
-			'''
-			Cycles damage type globally on every hit 
-			'''
+		DisplayName: Cycling Emblem
+		Tooltip: "Cycles damage type globally on every hit "
 	}
 }

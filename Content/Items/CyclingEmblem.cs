@@ -1,3 +1,4 @@
+using ScrewDamageTypes.Content.Player;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -26,8 +27,8 @@ public class CyclingEmblem : ModItem
 		recipe.Register();
 	}
 
-	public override void UpdateAccessory(Player player, bool hideVisual)
+	public override void UpdateAccessory(Terraria.Player player, bool hideVisual)
 	{
-		// TODO: implement functionality
+		player.GetModPlayer<CyclingPlayer>().enabled = true;
 	}
 }

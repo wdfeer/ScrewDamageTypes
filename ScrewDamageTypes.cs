@@ -2,7 +2,4 @@ using Terraria.ModLoader;
 
 namespace ScrewDamageTypes;
 
-public class ScrewDamageTypes : Mod
-{
-
-}
+public class ScrewDamageTypes : Mod;
