@@ -6,24 +6,32 @@ namespace ScrewDamageTypes.Content.Player;
 
 public class CyclingPlayer : ModPlayer
 {
-    public bool enabled;
+    public bool Enabled;
 
     public override void ResetEffects()
     {
-        enabled = false;
+        Enabled = false;
     }
-    
-    public DamageClass type = DamageClass.Melee;
-    
+
+    private DamageClass type = DamageClass.Melee;
+        
+    private const int INTERVAL = 60;
+    private int timer;
     public override void UpdateEquips()
     {
-        if (!enabled) return;
+        if (!Enabled) return;
+
+        timer++;
+
+        if (timer < INTERVAL) return;
         
         CycleDamageType(ref type);
         foreach (var item in Player.inventory)
         {
             item.DamageType = type;
         }
+
+        timer = 0;
     }
     
     public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref NPC.HitModifiers modifiers)

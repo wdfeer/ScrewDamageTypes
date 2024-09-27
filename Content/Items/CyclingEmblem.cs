@@ -29,6 +29,6 @@ public class CyclingEmblem : ModItem
 
 	public override void UpdateAccessory(Terraria.Player player, bool hideVisual)
 	{
-		player.GetModPlayer<CyclingPlayer>().enabled = true;
+		player.GetModPlayer<CyclingPlayer>().Enabled = true;
 	}
 }
