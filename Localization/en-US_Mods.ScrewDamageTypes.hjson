@@ -5,8 +5,8 @@ Items: {
 		DisplayName: Cycling Emblem
 		Tooltip:
 			'''
-			{$PercentIncreasedDamage}
-            Cycles damage type globally on every hit 
-            '''
+			{$CommonItemTooltip.PercentIncreasedDamage}
+			Cycles damage type of every weapon every second
+			'''
 	}
 }
