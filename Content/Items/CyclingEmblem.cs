@@ -34,6 +34,6 @@ public class CyclingEmblem : ModItem
 	public override void UpdateAccessory(Terraria.Player player, bool hideVisual)
 	{
 		player.GetDamage(DamageClass.Generic).Flat += DAMAGE_INCREASE;
-		player.GetModPlayer<CyclingPlayer>().Enabled = true;
+		player.GetModPlayer<CyclingPlayer>().enabled = true;
 	}
 }
