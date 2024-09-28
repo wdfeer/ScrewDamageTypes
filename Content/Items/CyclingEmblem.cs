@@ -10,8 +10,8 @@ public class CyclingEmblem : ModItem
 	public override void SetDefaults()
 	{
 		// TODO: create custom texture and update width, height
-		Item.width = 40;
-		Item.height = 40;
+		Item.width = 28;
+		Item.height = 28;
 		
 		Item.value = Item.buyPrice(gold: 1);
 		Item.rare = ItemRarityID.Pink;
