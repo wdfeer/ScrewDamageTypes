@@ -3,6 +3,10 @@
 Items: {
 	CyclingEmblem: {
 		DisplayName: Cycling Emblem
-		Tooltip: "Cycles damage type globally on every hit "
+		Tooltip:
+			'''
+			{$PercentIncreasedDamage}
+            Cycles damage type globally on every hit 
+            '''
 	}
 }
