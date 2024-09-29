@@ -8,6 +8,7 @@ namespace ScrewDamageTypes.Content.Items.Abstract;
 public abstract class FixedEmblem : ModItem
 {
     protected abstract DamageClass DamageType { get; } 
+    protected abstract int BaseEmblemID { get; }
     
     public override void SetDefaults()
     {
@@ -18,6 +19,14 @@ public abstract class FixedEmblem : ModItem
         Item.rare = ItemRarityID.Pink;
 		
         Item.accessory = true;
+    }
+    
+    public override void AddRecipes()
+    {
+        Recipe recipe = CreateRecipe();
+        recipe.AddIngredient(BaseEmblemID, 2);
+        recipe.AddTile(TileID.MythrilAnvil);
+        recipe.Register();
     }
     
     public override void UpdateAccessory(Terraria.Player player, bool hideVisual)
