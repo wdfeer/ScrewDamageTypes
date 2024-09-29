@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using ScrewDamageTypes.Content.Player;
 using Terraria;
 using Terraria.ID;
@@ -13,7 +14,6 @@ public class CyclingEmblem : ModItem
 	
 	public override void SetDefaults()
 	{
-		// TODO: create custom texture and update width, height
 		Item.width = 28;
 		Item.height = 28;
 		
@@ -31,9 +31,31 @@ public class CyclingEmblem : ModItem
 		recipe.Register();
 	}
 	
+	private DamageClass type = DamageClass.Melee;
+
+	private int cycleTimer;
+	
 	public override void UpdateAccessory(Terraria.Player player, bool hideVisual)
 	{
-		player.GetDamage(DamageClass.Generic).Flat += DAMAGE_INCREASE;
-		player.GetModPlayer<CyclingPlayer>().enabled = true;
+		cycleTimer++;
+        player.GetModPlayer<DamageTypePlayer>().SetDamageType(type);
+		
+		if (cycleTimer < CYCLE_INTERVAL) return;
+        
+		CycleDamageType(ref type);
+
+		cycleTimer = 0;
 	}
+	
+	public const int CYCLE_INTERVAL = 60;
+
+	public static void CycleDamageType(ref DamageClass type) => type = NextDamageClass[type] ?? type;
+
+	private static readonly Dictionary<DamageClass, DamageClass> NextDamageClass = new()
+	{
+		{ DamageClass.Melee, DamageClass.Ranged },
+		{ DamageClass.Ranged, DamageClass.Magic },
+		{ DamageClass.Magic, DamageClass.Summon },
+		{ DamageClass.Summon, DamageClass.Melee }
+	};
 }
