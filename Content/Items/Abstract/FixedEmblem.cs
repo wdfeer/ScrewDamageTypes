@@ -24,7 +24,8 @@ public abstract class FixedEmblem : ModItem
     public override void AddRecipes()
     {
         Recipe recipe = CreateRecipe();
-        recipe.AddIngredient(BaseEmblemID, 2);
+        recipe.AddIngredient(ModContent.ItemType<CyclingEmblem>());
+        recipe.AddIngredient(BaseEmblemID);
         recipe.AddTile(TileID.MythrilAnvil);
         recipe.Register();
     }
