@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using ScrewDamageTypes.Content.Player;
 using Terraria;
+using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -23,14 +24,9 @@ public class CyclingEmblem : ModItem
 		Item.accessory = true;
 	}
 
-	public override void AddRecipes()
-	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ItemID.AvengerEmblem, 2);
-		recipe.AddTile(TileID.MythrilAnvil);
-		recipe.Register();
-	}
-	
+	public override void AddRecipes() =>
+		ItemID.Sets.ShimmerTransformToItem[ItemID.AvengerEmblem] = ModContent.ItemType<CyclingEmblem>();
+
 	private DamageClass type = DamageClass.Melee;
 
 	private int cycleTimer;

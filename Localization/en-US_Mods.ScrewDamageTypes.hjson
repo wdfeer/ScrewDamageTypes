@@ -12,21 +12,21 @@ Items: {
 
 	FixedRangerEmblem: {
 		DisplayName: Ranger Conversion Emblem
-		Tooltip: "Changes the damage type of every weapon to ranged"
+		Tooltip: Changes the damage type of every weapon to ranged
 	}
 
 	FixedSorcererEmblem: {
 		DisplayName: Sorcerer Conversion Emblem
-		Tooltip: "Changes the damage type of every weapon to magic"
+		Tooltip: Changes the damage type of every weapon to magic
 	}
 
 	FixedSummonerEmblem: {
 		DisplayName: Summoner Conversion Emblem
-		Tooltip: "Changes the damage type of every weapon to summon"
+		Tooltip: Changes the damage type of every weapon to summon
 	}
 
 	FixedWarriorEmblem: {
 		DisplayName: Warrior Conversion Emblem
-		Tooltip: "Changes the damage type of every weapon to melee"
+		Tooltip: Changes the damage type of every weapon to melee
 	}
 }
