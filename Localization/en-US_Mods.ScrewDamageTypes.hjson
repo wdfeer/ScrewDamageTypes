@@ -9,4 +9,24 @@ Items: {
 			Cycles damage type of every weapon every second
 			'''
 	}
+
+	FixedRangerEmblem: {
+		DisplayName: Ranger Conversion Emblem
+		Tooltip: "Changes the damage type of every weapon to ranged"
+	}
+
+	FixedSorcererEmblem: {
+		DisplayName: Sorcerer Conversion Emblem
+		Tooltip: "Changes the damage type of every weapon to magic"
+	}
+
+	FixedSummonerEmblem: {
+		DisplayName: Summoner Conversion Emblem
+		Tooltip: "Changes the damage type of every weapon to summon"
+	}
+
+	FixedWarriorEmblem: {
+		DisplayName: Warrior Conversion Emblem
+		Tooltip: "Changes the damage type of every weapon to melee"
+	}
 }
